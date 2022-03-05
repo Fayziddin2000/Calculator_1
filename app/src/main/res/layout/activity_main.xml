@@ -10,6 +10,7 @@
 
     <androidx.cardview.widget.CardView
         android:layout_width="120dp"
+        android:backgroundTint="#292d36"
         android:layout_height="50dp"
         android:layout_marginTop="12dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -50,14 +51,14 @@
             android:background="@drawable/bg_for_card_view">
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/cv_1"
+                android:id="@+id/cv_clear"
                 style="@style/CalcButtons"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:layout_marginStart="28dp"
                 android:layout_marginTop="32dp"
-                app:layout_constraintBottom_toTopOf="@+id/cv_5"
-                app:layout_constraintEnd_toStartOf="@+id/cv_2"
+                app:layout_constraintBottom_toTopOf="@+id/cv_num7"
+                app:layout_constraintEnd_toStartOf="@+id/cv_plusandminus"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" >
 
@@ -74,15 +75,15 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/cv_2"
+                android:id="@+id/cv_plusandminus"
                 style="@style/CalcButtons"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:layout_marginStart="28dp"
                 android:layout_marginTop="32dp"
-                app:layout_constraintBottom_toTopOf="@+id/cv_6"
-                app:layout_constraintEnd_toStartOf="@+id/cv_3"
-                app:layout_constraintStart_toEndOf="@+id/cv_1"
+                app:layout_constraintBottom_toTopOf="@+id/cv_num8"
+                app:layout_constraintEnd_toStartOf="@+id/cv_percent"
+                app:layout_constraintStart_toEndOf="@+id/cv_clear"
                 app:layout_constraintTop_toTopOf="parent"
 
                     >
@@ -98,15 +99,15 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/cv_3"
+                android:id="@+id/cv_percent"
                 style="@style/CalcButtons"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:layout_marginStart="28dp"
                 android:layout_marginTop="32dp"
-                app:layout_constraintBottom_toTopOf="@+id/cv_7"
-                app:layout_constraintEnd_toStartOf="@+id/cv_4"
-                app:layout_constraintStart_toEndOf="@+id/cv_2"
+                app:layout_constraintBottom_toTopOf="@+id/cv_num9"
+                app:layout_constraintEnd_toStartOf="@+id/cv_devide"
+                app:layout_constraintStart_toEndOf="@+id/cv_plusandminus"
                 app:layout_constraintTop_toTopOf="parent"
                 >
                 <TextView
@@ -120,16 +121,16 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/cv_4"
+                android:id="@+id/cv_devide"
                 style="@style/CalcButtons"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:layout_marginStart="28dp"
                 android:layout_marginTop="32dp"
                 android:layout_marginEnd="28dp"
-                app:layout_constraintBottom_toTopOf="@+id/cv_8"
+                app:layout_constraintBottom_toTopOf="@+id/cv_multiply"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/cv_3"
+                app:layout_constraintStart_toEndOf="@+id/cv_percent"
                 app:layout_constraintTop_toTopOf="parent" >
                 <TextView
                     android:id="@+id/devide"
@@ -142,14 +143,14 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/cv_5"
+                android:id="@+id/cv_num7"
                 style="@style/CalcButtons"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
-                app:layout_constraintBottom_toTopOf="@+id/cv_9"
-                app:layout_constraintEnd_toEndOf="@+id/cv_1"
-                app:layout_constraintStart_toStartOf="@+id/cv_1"
-                app:layout_constraintTop_toBottomOf="@+id/cv_1" >
+                app:layout_constraintBottom_toTopOf="@+id/cv_num6"
+                app:layout_constraintEnd_toEndOf="@+id/cv_clear"
+                app:layout_constraintStart_toStartOf="@+id/cv_clear"
+                app:layout_constraintTop_toBottomOf="@+id/cv_clear" >
                 <TextView
                     android:id="@+id/seven"
                     android:layout_width="match_parent"
@@ -161,14 +162,14 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/cv_6"
+                android:id="@+id/cv_num8"
                 style="@style/CalcButtons"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
-                app:layout_constraintBottom_toTopOf="@+id/cv_10"
-                app:layout_constraintEnd_toEndOf="@+id/cv_2"
-                app:layout_constraintStart_toStartOf="@+id/cv_2"
-                app:layout_constraintTop_toBottomOf="@+id/cv_2" >
+                app:layout_constraintBottom_toTopOf="@+id/cv_num5"
+                app:layout_constraintEnd_toEndOf="@+id/cv_plusandminus"
+                app:layout_constraintStart_toStartOf="@+id/cv_plusandminus"
+                app:layout_constraintTop_toBottomOf="@+id/cv_plusandminus" >
                 <TextView
                     android:id="@+id/eight"
                     android:layout_width="match_parent"
@@ -180,14 +181,14 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/cv_7"
+                android:id="@+id/cv_num9"
                 style="@style/CalcButtons"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
-                app:layout_constraintBottom_toTopOf="@+id/cv_12"
-                app:layout_constraintEnd_toEndOf="@+id/cv_3"
-                app:layout_constraintStart_toStartOf="@+id/cv_3"
-                app:layout_constraintTop_toBottomOf="@+id/cv_3" >
+                app:layout_constraintBottom_toTopOf="@+id/cv_num4"
+                app:layout_constraintEnd_toEndOf="@+id/cv_percent"
+                app:layout_constraintStart_toStartOf="@+id/cv_percent"
+                app:layout_constraintTop_toBottomOf="@+id/cv_percent" >
                 <TextView
                     android:id="@+id/nine"
                     android:layout_width="match_parent"
@@ -199,14 +200,14 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/cv_8"
+                android:id="@+id/cv_multiply"
                 style="@style/CalcButtons"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
-                app:layout_constraintBottom_toTopOf="@+id/cv_13"
-                app:layout_constraintEnd_toEndOf="@+id/cv_4"
-                app:layout_constraintStart_toStartOf="@+id/cv_4"
-                app:layout_constraintTop_toBottomOf="@+id/cv_4" >
+                app:layout_constraintBottom_toTopOf="@+id/cv_minus"
+                app:layout_constraintEnd_toEndOf="@+id/cv_devide"
+                app:layout_constraintStart_toStartOf="@+id/cv_devide"
+                app:layout_constraintTop_toBottomOf="@+id/cv_devide" >
                 <TextView
                     android:id="@+id/multiply"
                     android:layout_width="match_parent"
@@ -218,14 +219,14 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/cv_9"
+                android:id="@+id/cv_num6"
                 style="@style/CalcButtons"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
-                app:layout_constraintBottom_toTopOf="@+id/cv_14"
-                app:layout_constraintEnd_toEndOf="@+id/cv_5"
-                app:layout_constraintStart_toStartOf="@+id/cv_5"
-                app:layout_constraintTop_toBottomOf="@+id/cv_5" >
+                app:layout_constraintBottom_toTopOf="@+id/cv_num3"
+                app:layout_constraintEnd_toEndOf="@+id/cv_num7"
+                app:layout_constraintStart_toStartOf="@+id/cv_num7"
+                app:layout_constraintTop_toBottomOf="@+id/cv_num7" >
                 <TextView
                     android:id="@+id/six"
                     android:layout_width="match_parent"
@@ -237,14 +238,14 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/cv_10"
+                android:id="@+id/cv_num5"
                 style="@style/CalcButtons"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
-                app:layout_constraintBottom_toTopOf="@+id/cv_15"
-                app:layout_constraintEnd_toEndOf="@+id/cv_6"
-                app:layout_constraintStart_toStartOf="@+id/cv_6"
-                app:layout_constraintTop_toBottomOf="@+id/cv_6" >
+                app:layout_constraintBottom_toTopOf="@+id/cv_num2"
+                app:layout_constraintEnd_toEndOf="@+id/cv_num8"
+                app:layout_constraintStart_toStartOf="@+id/cv_num8"
+                app:layout_constraintTop_toBottomOf="@+id/cv_num8" >
                 <TextView
                     android:id="@+id/five"
                     android:layout_width="match_parent"
@@ -256,14 +257,14 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/cv_12"
+                android:id="@+id/cv_num4"
                 style="@style/CalcButtons"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
-                app:layout_constraintBottom_toTopOf="@+id/cv_16"
-                app:layout_constraintEnd_toEndOf="@+id/cv_7"
-                app:layout_constraintStart_toStartOf="@+id/cv_7"
-                app:layout_constraintTop_toBottomOf="@+id/cv_7" >
+                app:layout_constraintBottom_toTopOf="@+id/cv_num1"
+                app:layout_constraintEnd_toEndOf="@+id/cv_num9"
+                app:layout_constraintStart_toStartOf="@+id/cv_num9"
+                app:layout_constraintTop_toBottomOf="@+id/cv_num9" >
                 <TextView
                     android:id="@+id/four"
                     android:layout_width="match_parent"
@@ -275,14 +276,14 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/cv_13"
+                android:id="@+id/cv_minus"
                 style="@style/CalcButtons"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
-                app:layout_constraintBottom_toTopOf="@+id/cv_17"
-                app:layout_constraintEnd_toEndOf="@+id/cv_8"
-                app:layout_constraintStart_toStartOf="@+id/cv_8"
-                app:layout_constraintTop_toBottomOf="@+id/cv_8" >
+                app:layout_constraintBottom_toTopOf="@+id/cv_plus"
+                app:layout_constraintEnd_toEndOf="@+id/cv_multiply"
+                app:layout_constraintStart_toStartOf="@+id/cv_multiply"
+                app:layout_constraintTop_toBottomOf="@+id/cv_multiply" >
                 <TextView
                     android:id="@+id/minus"
                     android:layout_width="match_parent"
@@ -294,14 +295,14 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/cv_14"
+                android:id="@+id/cv_num3"
                 style="@style/CalcButtons"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
-                app:layout_constraintBottom_toTopOf="@+id/cv_18"
-                app:layout_constraintEnd_toEndOf="@+id/cv_9"
-                app:layout_constraintStart_toStartOf="@+id/cv_9"
-                app:layout_constraintTop_toBottomOf="@+id/cv_9" >
+                app:layout_constraintBottom_toTopOf="@+id/cv_reload"
+                app:layout_constraintEnd_toEndOf="@+id/cv_num6"
+                app:layout_constraintStart_toStartOf="@+id/cv_num6"
+                app:layout_constraintTop_toBottomOf="@+id/cv_num6" >
                 <TextView
                     android:id="@+id/three"
                     android:layout_width="match_parent"
@@ -313,14 +314,14 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/cv_15"
+                android:id="@+id/cv_num2"
                 style="@style/CalcButtons"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
-                app:layout_constraintBottom_toTopOf="@+id/cv_19"
-                app:layout_constraintEnd_toEndOf="@+id/cv_10"
-                app:layout_constraintStart_toStartOf="@+id/cv_10"
-                app:layout_constraintTop_toBottomOf="@+id/cv_10" >
+                app:layout_constraintBottom_toTopOf="@+id/cv_num0"
+                app:layout_constraintEnd_toEndOf="@+id/cv_num5"
+                app:layout_constraintStart_toStartOf="@+id/cv_num5"
+                app:layout_constraintTop_toBottomOf="@+id/cv_num5" >
                 <TextView
                     android:id="@+id/two"
                     android:layout_width="match_parent"
@@ -332,14 +333,14 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/cv_16"
+                android:id="@+id/cv_num1"
                 style="@style/CalcButtons"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
-                app:layout_constraintBottom_toTopOf="@+id/cv_20"
-                app:layout_constraintEnd_toEndOf="@+id/cv_12"
-                app:layout_constraintStart_toStartOf="@+id/cv_12"
-                app:layout_constraintTop_toBottomOf="@+id/cv_12" >
+                app:layout_constraintBottom_toTopOf="@+id/cv_point"
+                app:layout_constraintEnd_toEndOf="@+id/cv_num4"
+                app:layout_constraintStart_toStartOf="@+id/cv_num4"
+                app:layout_constraintTop_toBottomOf="@+id/cv_num4" >
                 <TextView
                     android:id="@+id/one"
                     android:layout_width="match_parent"
@@ -351,34 +352,34 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/cv_17"
+                android:id="@+id/cv_plus"
                 style="@style/CalcButtons"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
-                app:layout_constraintBottom_toTopOf="@+id/cv_21"
-                app:layout_constraintEnd_toEndOf="@+id/cv_13"
-                app:layout_constraintStart_toStartOf="@+id/cv_13"
-                app:layout_constraintTop_toBottomOf="@+id/cv_13" >
+                app:layout_constraintBottom_toTopOf="@+id/cv_equal"
+                app:layout_constraintEnd_toEndOf="@+id/cv_minus"
+                app:layout_constraintStart_toStartOf="@+id/cv_minus"
+                app:layout_constraintTop_toBottomOf="@+id/cv_minus" >
                 <TextView
                     android:id="@+id/plus"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center"
-                    android:textColor="#f04075"
+                    android:textColor="#fd7075"
                     android:textSize="36sp"
                     android:text="+" />
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/cv_18"
+                android:id="@+id/cv_reload"
                 style="@style/CalcButtons"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:layout_marginBottom="42dp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="@+id/cv_14"
-                app:layout_constraintStart_toStartOf="@+id/cv_14"
-                app:layout_constraintTop_toBottomOf="@+id/cv_14" >
+                app:layout_constraintEnd_toEndOf="@+id/cv_num3"
+                app:layout_constraintStart_toStartOf="@+id/cv_num3"
+                app:layout_constraintTop_toBottomOf="@+id/cv_num3" >
 
                 <ImageView
                     android:id="@+id/reload"
@@ -389,15 +390,15 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/cv_19"
+                android:id="@+id/cv_num0"
                 style="@style/CalcButtons"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:layout_marginBottom="42dp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="@+id/cv_15"
-                app:layout_constraintStart_toStartOf="@+id/cv_15"
-                app:layout_constraintTop_toBottomOf="@+id/cv_15" >
+                app:layout_constraintEnd_toEndOf="@+id/cv_num2"
+                app:layout_constraintStart_toStartOf="@+id/cv_num2"
+                app:layout_constraintTop_toBottomOf="@+id/cv_num2" >
                 <TextView
                     android:id="@+id/zero"
                     android:layout_width="match_parent"
@@ -409,15 +410,15 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/cv_20"
+                android:id="@+id/cv_point"
                 style="@style/CalcButtons"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:layout_marginBottom="42dp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="@+id/cv_16"
-                app:layout_constraintStart_toStartOf="@+id/cv_16"
-                app:layout_constraintTop_toBottomOf="@+id/cv_16" >
+                app:layout_constraintEnd_toEndOf="@+id/cv_num1"
+                app:layout_constraintStart_toStartOf="@+id/cv_num1"
+                app:layout_constraintTop_toBottomOf="@+id/cv_num1" >
                 <TextView
                     android:id="@+id/point"
                     android:layout_width="match_parent"
@@ -429,15 +430,15 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/cv_21"
+                android:id="@+id/cv_equal"
                 style="@style/CalcButtons"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:layout_marginBottom="42dp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="@+id/cv_17"
-                app:layout_constraintStart_toStartOf="@+id/cv_17"
-                app:layout_constraintTop_toBottomOf="@+id/cv_17" >
+                app:layout_constraintEnd_toEndOf="@+id/cv_plus"
+                app:layout_constraintStart_toStartOf="@+id/cv_plus"
+                app:layout_constraintTop_toBottomOf="@+id/cv_plus" >
                 <TextView
                     android:id="@+id/equal"
                     android:layout_width="match_parent"
@@ -452,26 +453,30 @@
     </androidx.cardview.widget.CardView>
 
     <TextView
-        android:id="@+id/result"
-        android:layout_width="wrap_content"
+        android:id="@+id/tv_result"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="28dp"
+        android:layout_marginHorizontal="28dp"
         android:layout_marginBottom="32dp"
         android:textSize="46sp"
         android:textColor="@android:color/white"
         android:text=""
+        android:textStyle="bold"
+        android:textAlignment="textEnd"
         app:layout_constraintBottom_toTopOf="@+id/cardView"
         app:layout_constraintEnd_toEndOf="parent" />
 
     <TextView
-        android:id="@+id/working"
-        android:layout_width="wrap_content"
+        android:id="@+id/tv_working"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text=""
+        android:textStyle="bold"
+        android:textAlignment="textEnd"
         android:textColor="@android:color/white"
         android:textSize="24sp"
         android:layout_marginBottom="16dp"
-        android:layout_marginEnd="28dp"
-        app:layout_constraintBottom_toTopOf="@+id/result"
+        android:layout_marginHorizontal="28dp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_result"
         app:layout_constraintEnd_toEndOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
