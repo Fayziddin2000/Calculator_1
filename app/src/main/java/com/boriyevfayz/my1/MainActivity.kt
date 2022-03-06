@@ -1,6 +1,7 @@
 package com.boriyevfayz.my1
 
 import android.os.Bundle
+import android.renderscript.ScriptGroup
 import android.util.Log
 import android.view.View
 import android.widget.TextView
@@ -24,6 +25,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         }
         initNumPad()
 
+
     }
 
     private fun initNumPad() {
@@ -38,18 +40,52 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         mBinding.cvNum8.setOnClickListener(this)
         mBinding.cvNum9.setOnClickListener(this)
         mBinding.cvPoint.setOnClickListener(this)
+        mBinding.cvPlus.setOnClickListener(this)
+        mBinding.cvMinus.setOnClickListener(this)
+        mBinding.cvMultiply.setOnClickListener(this)
+        mBinding.cvDevide.setOnClickListener(this)
+        mBinding.cvEqual.setOnClickListener(this)
+        mBinding.cvPercent.setOnClickListener(this)
+
     }
 
     private fun sum() {
 
     }
 
-    private fun getNumb() {
-        val nums = mBinding.tvWorking.text.split("")
+    private fun getNumb(): List<String> {
+        val nums = mBinding.tvWorking.text.split(" ")
         Log.d("TAG", "getNums: $nums ")
+        return nums
     }
 
-    private fun result() {
+    private fun result(nums: List<String>): String {
+        return if (nums.size > 1) {
+            when (nums[1]) {
+                "+" -> {
+                    (nums[0].toDouble() + nums[2].toDouble()).toString()
+                }
+                "-" -> {
+                    (nums[0].toDouble() - nums[2].toDouble()).toString()
+                }
+                "x" -> {
+                    (nums[0].toDouble() * nums[2].toDouble()).toString()
+                }
+                "/" -> {
+                    (nums[0].toDouble() / nums[2].toDouble()).toString()
+                }
+                "%" -> {
+                (nums[0].toDouble() / 100).toString()
+                }
+
+                else -> {
+                    "you fucked up man"
+                }
+            }
+        } else {
+            "you fucked up man"
+        }
+
     }
 
 
@@ -57,18 +93,17 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
         when (view.id) {
             mBinding.cvNum0.id -> {
-                when {
-                    input!!.text.isNullOrEmpty() -> input!!.text = "0"
-                    input!!.text[0] == '0' -> {
-                    }
-                    else -> {
-                        val tmp = StringBuilder()
-                        tmp.append(input!!.text)
-                        tmp.append(0)
-                        input!!.text = tmp.toString()
-                    }
+                if (!input!!.text.isNullOrEmpty()) input!!.text = "0"
+                else if (input!!.text[0] == '0') {
+                } else {
+                    val tmp = StringBuilder()
+                    tmp.append(input!!.text)
+                    tmp.append(0)
+                    input!!.text = tmp.toString()
                 }
             }
+
+
             mBinding.cvNum1.id -> pastNumb(1.toString(), input!!)
             mBinding.cvNum2.id -> pastNumb(2.toString(), input!!)
             mBinding.cvNum3.id -> pastNumb(3.toString(), input!!)
@@ -89,10 +124,24 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                     input!!.text = tmp.toString()
                 }
             }
-            mBinding.cvPlus.id -> {
-                pasteSymbol(resources.getString(R.string.sum), input)
+            mBinding.cvMinus.id -> {
+                pasteSymbol(resources.getString(R.string.devide), input!!)
             }
-
+            mBinding.cvPlus.id -> {
+                pasteSymbol(resources.getString(R.string.sum), input!!)
+            }
+            mBinding.cvDevide.id -> {
+                pasteSymbol(resources.getString(R.string.devide), input!!)
+            }
+            mBinding.cvMultiply.id -> {
+                pasteSymbol(resources.getString(R.string.multiply), input!!)
+            }
+            mBinding.cvEqual.id -> {
+                mBinding.tvResult.text = result(getNumb())
+            }
+            mBinding.cvPercent.id ->{
+                pasteSymbol(resources.getString(R.string.percent), input!!)
+            }
         }
 
     }
@@ -109,4 +158,15 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         }
     }
 
+    private fun pasteSymbol(symbol: String, input: TextView) {
+        if (input.text.isNullOrEmpty()) {
+        } else {
+            val tmp = StringBuilder()
+            tmp.append(input.text)
+            tmp.append(symbol)
+            input.text = tmp.toString()
+        }
+
+
+    }
 }

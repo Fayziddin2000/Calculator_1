@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">Calculator</string>
-    <string name="sum" ><font color = "#fd7075" weight = "200" >%</font></string>
+    <string name="sum" > <font color = "#fd7075" weight = "200" >+</font> </string>
+    <string name="minus" > <font color = "#fd7075" weight = "200" >-</font> </string>
+    <string name="devide" > <font color = "#fd7075" weight = "200" >/</font> </string>
+    <string name="multiply" > <font color = "#fd7075" weight = "200" >x</font> </string>
+    <string name="percent" > <font color = "#fd7075" weight = "200" >%</font> </string>
 </resources>
